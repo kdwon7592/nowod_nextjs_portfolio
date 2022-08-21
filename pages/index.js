@@ -1,6 +1,6 @@
 
-import Animation from '../components/Home/animation'
-import Hero from '../components/Home/hero'
+import Animation from '../components/home/animation'
+import Hero from '../components/home/hero'
 import Layout from '../components/layout'
 
 export default function Home() {
