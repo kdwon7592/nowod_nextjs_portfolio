@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
 .bg-primary {
     @apply bg-white dark:bg-slate-800
 }
@@ -11,18 +15,19 @@
 }
 
 .project-card {
-    @apply flex flex-col m-3 rounded-xl w-full
+    @apply flex flex-col rounded-xl w-full
             transition duration-300 transform border border-gray-300
             hover:scale-105
             hover:shadow-lg
             dark:border-gray-200/50
             dark:hover:shadow-gray-400/40
+            hover:cursor-pointer
 
             /* hover:text-blue-600
             dark:hover:text-slate-400 */
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, button {
     @apply text-slate-900 dark:text-white
 }
 
@@ -39,3 +44,4 @@ a {
 p {
     @apply text-slate-500 dark:text-slate-400
 }
+

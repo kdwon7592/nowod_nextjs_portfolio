@@ -1,12 +1,15 @@
 import '../styles/globals.css'
 import { ThemeProvider } from 'next-themes'
+import { LanguageProvider } from '../components/contexts/languageName'
 
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ThemeProvider attribute='class'>
-      <Component {...pageProps} />
-    </ThemeProvider>
+    <LanguageProvider>
+      <ThemeProvider attribute='class'>
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </LanguageProvider>
   )
 }
 

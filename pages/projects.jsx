@@ -8,9 +8,9 @@ export default function Projects({ projects }) {
             <Layout>
                 <section className="flex flex-col items-center justify-center min-h-screen px-5 py-24 mb-10">
                     <h1 className="text-4xl font-vold a,:text-6xl">
-                        총 프로젝트 : <span className="pl-4 text-blue-500">{projects.results.length}</span>
+                        나의 프로젝트
                     </h1>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-full py-10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-full py-10 max-w-sm md:max-w-4xl">
                         {projects.results.map(project => (
                             <ProjectItem key={project.id} data={project}></ProjectItem>
                         ))}

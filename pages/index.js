@@ -1,4 +1,6 @@
 
+import { useContext } from 'react'
+import { LanguageContext } from '../components/contexts/languageName'
 import Animation from '../components/home/animation'
 import Hero from '../components/home/hero'
 import Layout from '../components/layout'

@@ -17,9 +17,11 @@ export default function ThemeToggle() {
     return (
         <>
             <button onClick={toggleTheme}
-                className="inline-flex items-center
-                         bg-gray-100 border-0 py-1 px-3 focus:outline-none 
-                         rounded text-base mt-4 md:mt-0
+                className="inline-flex items-center mr-3
+                         bg-gray-100 
+                         dark:bg-gray-500
+                         border-0 py-1 px-3 focus:outline-none 
+                         rounded text-base
                          hover:bg-gray-50 
                          hover:text-orange-500
                          dark:hover:bg-slate-600
