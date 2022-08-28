@@ -1,38 +1,40 @@
 import Image from "next/image";
 import Link from "next/link";
+import React from "react";
 
 export default function ProjectItem({ data }) {
-    const projectTitle = data.properties.Name.title[0].plain_text;
-    const projectDescription = data.properties.Description.rich_text[0].plain_text;
-    const projectTags = data.properties.Tags.multi_select;
-    const projectWorkPeriod = data.properties.WorkPeriod.rich_text[0].plain_text;
-    const coverImage = data.cover.file.url;
+    const projectTitle = data.properties.Name?.title[0].plain_text;
+    const projectDescription = data.properties.Description?.rich_text[0].plain_text;
+    const projectTags = data.properties.Tags?.multi_select;
+    const projectWorkPeriod = data.properties.WorkPeriod?.rich_text[0].plain_text;
+    const coverImage = data.cover?.file.url;
     const notionUrl = data.url;
 
     // console.log(notionUrl);
 
     return (
-        <Link href={notionUrl}>
-            <section className="project-card text-gray-600 body-font ">
-                <a target="_blank">
+
+        <section className="project-card text-gray-600 body-font ">
+            <Link href={notionUrl}>
+                <a target="blank">
                     <Image className="rounded-t-xl"
                         src={coverImage}
                         width="100%"
-                        height="30%"
+                        height="45%"
                         layout="responsive"
                         objectFit="fill"
                         quality={100}
                         alt="project image"
                     />
                     <div className="container px-5 mx-auto">
-                        <div className="flex flex-wrap flex-col w-full mb-5">
+                        <div className="flex flex-wrap flex-col w-full mb-3">
                             <div className="w-full mb-6 lg:mb-0">
-                                <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 mt-2">
+                                <h1 className="sm:text-2xl text-xl font-medium title-font mb-2 mt-2">
                                     {projectTitle}
                                 </h1>
                                 <div className="h-1 w-20 bg-indigo-500 rounded"></div>
                             </div>
-                            <p className="w-full leading-relaxed">
+                            <p className="w-full leading-relaxed mt-2">
                                 {projectDescription}
                             </p>
                         </div>
@@ -48,8 +50,9 @@ export default function ProjectItem({ data }) {
                         </div>
                     </div>
                 </a >
-            </section >
-
-        </Link>
+            </Link>
+        </section >
     )
 }
+
+export const MemoizedProjectItems = React.memo(ProjectItem);

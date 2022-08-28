@@ -11,7 +11,22 @@ body {
 }
 
 .btn-project {
-    @apply inline-flex text-white dark:text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg
+    @apply inline-flex border-0 py-2 px-6 focus:outline-none rounded text-lg
+    text-white hover:text-white
+    dark:text-white dark:hover:text-white
+    bg-indigo-500 hover:bg-indigo-600 
+    dark:bg-sky-800 dark:hover:bg-sky-600
+}
+
+.btn-hero {
+  @apply inline-flex py-2 px-6 focus:outline-none rounded text-lg
+  border-solid border-2
+  text-gray-700 hover:text-gray-900
+  dark:text-white dark:hover:text-white
+  bg-slate-100 hover:bg-slate-300
+  dark:bg-slate-700 dark:hover:bg-slate-500
+  border-slate-500 dark:border-slate-600
+
 }
 
 .project-card {

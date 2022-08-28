@@ -22,12 +22,21 @@ export default function Hero() {
             <p className="mb-8 leading-relaxed">
                 {aboutContent.description}
             </p>
-            <div className="flex justify-center mb-10">
-                <Link href="/projects">
-                    <a className="btn-project">
-                        프로젝트 보러가기
-                    </a>
-                </Link>
+            <div className="flex flex-row justify-center mb-10">
+                <div className="flex justify-center mb-10">
+                    <Link href="https://velog.io/@nowod_it">
+                        <a className="btn-hero" target="blank">
+                            {languageName === 'en' ? 'My Blog' : '나의 블로그'}
+                        </a>
+                    </Link>
+                </div>
+                <div className="flex justify-center ml-3  mb-10">
+                    <Link href="/projects">
+                        <a className="btn-hero">
+                            {languageName === 'en' ? 'Projects' : '프로젝트'}
+                        </a>
+                    </Link>
+                </div>
             </div>
             <p className="mb-8 text-xs leading-relaxed">
                 {aboutContent.description2}

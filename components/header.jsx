@@ -33,8 +33,8 @@ export default function Header() {
                         </Link>
                         <a className="mr-5 hover:text-gray-900">{menuContent.skills}</a>
                         <a className="mr-5 hover:text-gray-900">{menuContent.contact}</a>
-                        <ThemeToggle />
                         <LanguageToggle />
+                        <ThemeToggle />
                     </nav>
                 </div>
             </header>
