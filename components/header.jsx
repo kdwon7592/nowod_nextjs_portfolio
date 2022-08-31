@@ -31,7 +31,9 @@ export default function Header() {
                         <Link href="/projects">
                             <a className="mr-5 hover:text-gray-900">{menuContent.projects}</a>
                         </Link>
-                        <a className="mr-5 hover:text-gray-900">{menuContent.skills}</a>
+                        <Link href="/skills">
+                            <a className="mr-5 hover:text-gray-900">{menuContent.skills}</a>
+                        </Link>
                         <a className="mr-5 hover:text-gray-900">{menuContent.contact}</a>
                         <LanguageToggle />
                         <ThemeToggle />
