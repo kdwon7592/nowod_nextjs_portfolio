@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useContext } from "react";
 import { about } from "../../portfolio";
-import { LanguageContext } from "../contexts/languageName";
+import { LanguageContext } from "../contexts/language";
 
 
 export default function Hero() {

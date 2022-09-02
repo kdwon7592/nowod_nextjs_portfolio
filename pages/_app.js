@@ -1,6 +1,6 @@
 import '../styles/globals.css'
 import { ThemeProvider } from 'next-themes'
-import { LanguageProvider } from '../components/contexts/languageName'
+import { LanguageProvider } from '../components/contexts/language'
 
 
 function MyApp({ Component, pageProps }) {

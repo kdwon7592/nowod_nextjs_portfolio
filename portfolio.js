@@ -2,7 +2,7 @@ const menu = {
   en: {
     home: 'home',
     projects: 'projects',
-    skills: 'my skills',
+    skills: 'skills',
     contact: 'contact',
   },
   kr: {
@@ -36,30 +36,6 @@ const about = {
     github: 'https://github.com/kdwon7592?tab=repositories',
   },
 }
-
-
-// const skills = {
-//   good: {
-//     skill: ['Javascript', 'Java', 'Spring', 'Oracle', 'MS-SQL', 'Web', 'jquery'],
-//     image: [''],
-//     kr: '실무에서 자주 사용하고, 익숙하게 쓰고 있어요.'
-//   },
-
-//   can: {
-//     skill: ['React', 'Android', 'My-SQL'],
-//     kr: '실무에서 써본적도 있고, 어느정도 할 줄 알아요.'
-//   },
-
-//   readable: {
-//     skill: ['Python', 'SWIFT', 'C#', 'PHP'],
-//     kr: "코드를 읽고 이해할 수 있어요."
-//   },
-
-//   tools: {
-//     skill: ['svn', 'git', 'AWS', 'MS-AZURE', 'Jenkins', 'Confluence', 'Trello', 'Intermax'],
-//     kr: "제가 사용하고 있고, 사용했던 경험이 있어요."
-//   }
-// }
 
 const mySkill = {
   language: {
@@ -189,8 +165,4 @@ const mySkill = {
   },
 }
 
-const contact = {
-  email: 'kdwon7592@naver.com',
-}
-
-export { about, menu, contact, mySkill }
+export { about, menu, mySkill }

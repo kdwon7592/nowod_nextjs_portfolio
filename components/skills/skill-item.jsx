@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React, { useContext } from "react";
 import { mySkill } from "../../portfolio";
-import { LanguageContext } from "../contexts/languageName";
+import { LanguageContext } from "../contexts/language";
 
 export default function SkillItem() {
     const [{ languageName }] = useContext(LanguageContext);
@@ -25,9 +25,9 @@ export default function SkillItem() {
                                         </button>
                                         <div className="absolute opacity-0 sm:w-10/12 lg:w-auto px-5 py-1 whitespace-normal hover:opacity-100 transition duration-700 ease-in-out bg-gray-300 dark:bg-slate-200 rounded-xl z-10">
                                             <div className="text-sm font-bold text-black leading-relaxed">[{mySkill[header][tech].name}]</div>
-                                            <div className="text-sm text-slate-700 leading-relaxed">- {mySkill[header][tech].description1}</div>
+                                            <div className="text-sm text-slate-700 leading-relaxed">: {mySkill[header][tech].description1}</div>
                                             {mySkill[header][tech].description2 === '' ? '' :
-                                                <div className="text-sm text-slate-700  leading-relaxed">- {mySkill[header][tech].description2}</div>}
+                                                <div className="text-sm text-slate-700  leading-relaxed">: {mySkill[header][tech].description2}</div>}
                                         </div>
                                     </div>
                                 </li>

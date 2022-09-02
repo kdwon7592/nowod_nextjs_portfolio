@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 const LanguageContext = createContext();
 
 const LanguageProvider = ({ children }) => {
-  const [languageName, setLanguageName] = useState('en');
+  const [languageName, setLanguageName] = useState('kr');
 
   useEffect(() => {
     const lang = localStorage.getItem('language');

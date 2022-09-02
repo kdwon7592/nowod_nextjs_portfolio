@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import Lottie from "react-lottie-player";
-import { LanguageContext } from "../components/contexts/languageName";
+import { LanguageContext } from "../components/contexts/language";
 import Layout from "../components/layout";
 import SkillItem from "../components/skills/skill-item";
 import language_json from '/public/animation_languages2.json'

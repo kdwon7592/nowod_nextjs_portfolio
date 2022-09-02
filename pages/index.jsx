@@ -1,5 +1,6 @@
 
 import Animation from '../components/common/animation'
+import Particles from '../components/common/particles'
 import Hero from '../components/home/hero'
 import Layout from '../components/layout'
 

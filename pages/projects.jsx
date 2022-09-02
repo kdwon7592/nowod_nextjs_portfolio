@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { LanguageContext } from "../components/contexts/languageName";
+import { LanguageContext } from "../components/contexts/language";
 import Layout from "../components/layout";
 import { MemoizedProjectItems } from "../components/projects/project-item";
 import { NOTION_DATABASE_ID, NOTION_DATABASE_TOKEN } from "../config";

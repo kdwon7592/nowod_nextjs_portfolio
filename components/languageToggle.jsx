@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from 'react';
-import { LanguageContext } from './contexts/languageName';
+import { LanguageContext } from './contexts/language';
 
 export default function LanguageToggle() {
     const [{ languageName, toggleLanguage }] = useContext(LanguageContext);

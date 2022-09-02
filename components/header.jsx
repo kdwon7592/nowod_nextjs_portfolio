@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useContext } from "react";
-import { LanguageContext } from "./contexts/languageName";
+import { LanguageContext } from "./contexts/language";
 import ThemeToggle from "./themeToggle";
 import { menu } from "../portfolio";
 import LanguageToggle from "./languageToggle";
@@ -26,15 +26,17 @@ export default function Header() {
                     </Link>
                     <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
                         <Link href="/">
-                            <a className="mr-5 hover:text-gray-900">{menuContent.home}</a>
+                            <a className="mr-2 md:mr-5 hover:text-gray-900">{menuContent.home}</a>
                         </Link>
                         <Link href="/projects">
-                            <a className="mr-5 hover:text-gray-900">{menuContent.projects}</a>
+                            <a className="mr-2 md:mr-5 hover:text-gray-900">{menuContent.projects}</a>
                         </Link>
                         <Link href="/skills">
-                            <a className="mr-5 hover:text-gray-900">{menuContent.skills}</a>
+                            <a className="mr-2 md:mr-5 hover:text-gray-900">{menuContent.skills}</a>
                         </Link>
-                        <a className="mr-5 hover:text-gray-900">{menuContent.contact}</a>
+                        <Link href="/contact">
+                            <a className="mr-2 md:mr-5 hover:text-gray-900">{menuContent.contact}</a>
+                        </Link>
                         <LanguageToggle />
                         <ThemeToggle />
                     </nav>
