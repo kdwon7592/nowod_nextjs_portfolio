@@ -2,15 +2,42 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-export default function ProjectItem({ data }) {
-    const projectTitle = data.properties.Name?.title[0].plain_text;
-    const projectDescription = data.properties.Description?.rich_text[0].plain_text;
-    const projectTags = data.properties.Tags?.multi_select;
-    const projectWorkPeriod = data.properties.WorkPeriod?.rich_text[0].plain_text;
-    const coverImage = data.cover?.file.url;
-    const notionUrl = data.url;
+const projectCache = [];
 
-    // console.log(notionUrl);
+export default function ProjectItem({ data }) {
+
+    let projectTitle = '';
+    let projectDescription = '';
+    let projectTags = '';
+    let projectWorkPeriod = '';
+    let coverImage = '';
+    let notionUrl = '';
+
+    if (projectCache[data.id]) {
+        projectTitle = data.properties.Name?.title[0].plain_text;
+        projectDescription = data.properties.Description?.rich_text[0].plain_text;
+        projectTags = data.properties.Tags?.multi_select;
+        projectWorkPeriod = data.properties.WorkPeriod?.rich_text[0].plain_text;
+        coverImage = data.properties.cover?.rich_text[0].plain_text;
+        notionUrl = data.url;
+    } else {
+        projectTitle = data.properties.Name?.title[0].plain_text;
+        projectDescription = data.properties.Description?.rich_text[0].plain_text;
+        projectTags = data.properties.Tags?.multi_select;
+        projectWorkPeriod = data.properties.WorkPeriod?.rich_text[0].plain_text;
+        coverImage = data.properties.cover?.rich_text[0].plain_text;
+        notionUrl = data.url;
+
+        projectCache[data.id] = {
+            projectTitle,
+            projectDescription,
+            projectTags,
+            projectWorkPeriod,
+            coverImage,
+            notionUrl
+        }
+
+    }
 
     return (
 
@@ -18,7 +45,7 @@ export default function ProjectItem({ data }) {
             <Link href={notionUrl}>
                 <a target="blank">
                     <Image className="rounded-t-xl"
-                        src={coverImage}
+                        src={`/${coverImage}`}
                         width="100%"
                         height="45%"
                         layout="responsive"

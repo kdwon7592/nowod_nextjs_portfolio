@@ -16,8 +16,7 @@ export default function SkillItem() {
                             Object.keys(mySkill[header]).map(tech => (
                                 <li className="group" key={Math.random()}>
                                     <div className="flex items-center rounded-xl mb-2">
-                                        <button className="items-center flex py-3 px-4 text-sm font-normal"
-                                            onClick="">
+                                        <button className="items-center flex py-3 px-4 text-sm font-normal">
                                             <Image width={35} height={35}
                                                 src={mySkill[header][tech].imgSrc}
                                                 alt="" />
